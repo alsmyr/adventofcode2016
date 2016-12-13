@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = function(day) {
-  var inputPath = path.join(__dirname, `${day}.txt`);
+  var inputPath = path.join(__dirname, `${day}/${day}.txt`);
   try {
     var inputString = fs.readFileSync(inputPath, 'utf8');
     return inputString;

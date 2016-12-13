@@ -23,7 +23,7 @@ button.addEventListener('click', () => {
   stopModule();
   const day = select.value;
   container.innerHTML = '';
-  const moduleName = `${__dirname}/../${day}.js`;
+  const moduleName = `${__dirname}/../${day}/${day}.js`;
   delete require.cache[require.resolve(moduleName)];
   // eslint-disable-next-line
   try {
