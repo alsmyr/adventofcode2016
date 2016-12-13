@@ -1,0 +1,37 @@
+{
+  "name": "adventofcode2016",
+  "version": "1.0.0",
+  "description": "http://adventofcode.com/",
+  "main": "ui/main.js",
+  "dependencies": {
+    "a-star": "^0.2.0",
+    "electron": "^1.4.10",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-config-airbnb-base": "^7.1.0",
+    "eslint-import-resolver-webpack": "^0.5.1",
+    "eslint-plugin-async-await": "0.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.2.1",
+    "heap": "^0.2.6",
+    "js-md5": "^0.3.0",
+    "lazy.js": "^0.4.2",
+    "lodash": "^4.17.2",
+    "request": "^2.67.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron electronapp/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alsmyr/adventofcode2016.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alsmyr/adventofcode2016/issues"
+  },
+  "homepage": "https://github.com/alsmyr/adventofcode2016#readme"
+}

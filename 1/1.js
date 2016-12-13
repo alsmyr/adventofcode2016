@@ -1,6 +1,5 @@
 const _ = require('lodash');
-const input = require('../getInput')(1, 2016);
-const paintCoordsInContainer = require('../ui/paintCoordsInContainer');
+const input = require('../load')(1);
 
 const commands = input.split(', ').map(comm => ([comm[0], comm.slice(1)]));
 const turn = (d, t) => ((d + 4 + (t === 'R' ? 1 : -1)) % 4);
