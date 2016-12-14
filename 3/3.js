@@ -1,31 +1,12 @@
 const _ = require('lodash');
 const input = require('../load')(3);
 
-function isValid(s)
-{
-    const sortedSides = s.slice().sort((a, b) => a < b ? 1 : -1)
-    return sortedSides[0] < sortedSides[1] + sortedSides[2]
-}
+const isValid = ([a, b, c]) => a + b > c && a + c > b && c + b > a;
 
-function parse(input) {
-  return input.split('\n').map(line => [
-    parseInt(line.substr(0, 5), 10),
-    parseInt(line.substr(5, 10), 10),
-    parseInt(line.substr(10, 15), 10)
-  ])
-}
+const data1 = input.split('\n').map(line => _.compact(line.split(/\s+/)).map(i => parseInt(i, 10)));
 
-function count(input) {
-  return parse(input).filter(isValid).length
-}
+const data2 = _.flatMap(_.range(data1.length / 3), i => _.times(3, j => _.times(3, k =>
+  data1[(i * 3) + k][j]
+)));
 
-console.log(count(input));
-
-module.exports = {
-  run(container) {
-    
-  },
-
-  stop() {
-  },
-  }
+console.log('1:' + _.filter(data1, isValid).length,'2:' + _.filter(data2, isValid).length);
